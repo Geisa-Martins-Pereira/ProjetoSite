@@ -1,0 +1,37 @@
+SELECT * FROM avaliacoes a;
+
+SELECT * FROM banner b;
+
+SELECT * FROM cardapio c;
+
+SELECT * FROM contatenos c;
+
+SELECT * FROM contato c;
+
+SELECT * FROM dados d;
+
+SELECT * FROM equipe e;
+
+SELECT * FROM eventos e;
+
+SELECT * FROM footer f;
+
+SELECT * FROM funcionarios f;
+
+SELECT * FROM galeria g;
+
+SELECT * FROM imgreserva i;
+
+SELECT * FROM mapacontatenos m;
+
+SELECT * FROM menucardapio m;
+
+SELECT * FROM pessoas p;
+
+SELECT * FROM pqnos p;
+
+SELECT * FROM redessociais r;
+
+SELECT * FROM reserva r;
+
+SELECT * FROM sobrenos s;
