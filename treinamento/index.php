@@ -51,7 +51,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.23/dist/sweetalert2.min.css
             </div>
             <div class="card-body">
         
-            <div id="showpage"><?php include_once("./clientes/listarClientes.php"); ?></div>
+            <div id="showpage"><?php include_once("./clientes/listarCliente.php"); ?></div>
 
                 <div id="msgGeral"></div>
 

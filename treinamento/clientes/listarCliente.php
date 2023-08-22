@@ -42,11 +42,11 @@ foreach ($retornoListaCliente as $itemListaCLiente){
                             <?php
                             if($ativo === 'A'){
                             ?>
-                                    <button type='button' data-toggle='modal' class='btn btn-outline-success' data-mdb-ripple-color='dark' data-target='#modalDesativarCliente' onclick="ativarGeral(<?php echo $idcliente; ?>, 'desativar', 'btnDesativar', 'ativarCliente');"><span class="mdi mdi-lock-open-check"></span>Desativar</button>
+                                    <button type='button' data-toggle='modal' class='btn btn-outline-success' data-mdb-ripple-color='dark' data-target='#modalDesativarCliente' onclick="ativarGeral(<?php echo $idcliente; ?>, 'desativar', 'btnDesativar', 'ativarCliente', 'modalDesativarCliente');"><span class="mdi mdi-lock-open-check"></span>Desativar</button>
                                     <?php
                             } else {
                                     ?>
-                                    <button type='button' data-toggle='modal' class='btn btn-outline-success' data-mdb-ripple-color='dark' data-target='#modalAtivarCliente' onclick="ativarGeral(<?php echo $idcliente; ?>, 'ativar', 'btnAtivar', 'ativarCliente');"><span class="mdi mdi-lock-open-check"></span>Ativar</button>
+                                    <button type='button' data-toggle='modal' class='btn btn-outline-success' data-mdb-ripple-color='dark' data-target='#modalAtivarCliente' onclick="ativarGeral(<?php echo $idcliente; ?>, 'ativar', 'btnAtivar', 'ativarCliente', 'modalAtivarCliente');"><span class="mdi mdi-lock-open-check"></span>Ativar</button>
 
                                     <?php
                             }

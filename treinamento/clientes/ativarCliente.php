@@ -12,13 +12,21 @@ if (!empty($dados) && isset($dados)) {
 
     if ($ativar == 'A') {
 
-        # ativar aqui
-        echo json_encode('Ativar aqui.');
+        $retorno = upUm('cliente', 'ativo', 'idcliente', 'A', $idCliente);
+        if ($retorno == 'Atualizado') {
+            echo json_encode('Ok');
+        } else {
+            echo json_encode($retorno);
+        }
         
     } else {
 
-        # desativar aqui
-        echo json_encode('Desativar aqui.');
+        $retorno = upUm('cliente', 'ativo', 'idcliente', 'D', $idCliente);
+        if ($retorno == 'Atualizado') {
+            echo json_encode('Ok');
+        } else {
+            echo json_encode($retorno);
+        }
     } 
 } else {
      echo json_encode('Erro. Insert não com concluído.');

@@ -41,10 +41,10 @@ console.log('botaoFunfa');
                     msgGeral();
                    $('div#msgGeral').html("<div className='alert alert-success text-center' role='alert'>Gravado com sucesso!!</div>");
 
-                   listarGeral('ListarCliente');
-                   setTimeout(function(){
-                    $('div#msgGeral').html('');
-                   }, 3000)
+                   listarGeral('listarCliente');
+                //    setTimeout(function(){
+                //     $('div#msgGeral').html('');
+                //    }, 3000)
                    
 
                 }else{
@@ -73,9 +73,9 @@ function listarCliente() {
     });
 }
 
-function ListarGeral() {
+function listarGeral(acao) {
     var dados = {
-        acao: 'acaopage',
+        acao: acao,
     }
 
     $.ajax({
@@ -114,8 +114,8 @@ function mascaras() {
     });    
 }
 
-function ativoGeral(e, ativo, idbtn, acao) {
-    if (ativo = 'ativar') {
+function ativarGeral(e, ativo, idbtn, acao, modal) {
+    if (ativo == 'ativar') {
         var btn = idbtn;   
         var ativo = 'A';  
     } else {
@@ -129,6 +129,8 @@ function ativoGeral(e, ativo, idbtn, acao) {
             a: ativo,
         }
 
+        console.log(dados);
+
         $.ajax({
             type: "POST",
             dataType: 'JSON',
@@ -137,6 +139,22 @@ function ativoGeral(e, ativo, idbtn, acao) {
             beforeSend: function (retorno) {
             }, success: function (retorno) {
                 console.log(retorno);
+
+                if(retorno=='Ok') {
+                    $('#'+modal).modal('hide');
+                    msgGeral();
+                   $('div#msgGeral').html("<div className='alert alert-success text-center' role='alert'>Gravado com sucesso!!</div>");
+
+                   listarGeral('listarCliente');
+                //    setTimeout(function(){
+                //     $('div#msgGeral').html('');
+                //    }, 3000)
+                   
+
+                }else{
+                    
+                    $('div#msgGeral').html("<div className='alert alert-danger text-center' role='alert'>Erro, não gravou.</div>");
+                }
             }
         });
     });
